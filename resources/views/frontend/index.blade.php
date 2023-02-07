@@ -1,7 +1,10 @@
 @extends('frontend.main_master')
 @section('content')
 @section('title')
-Flipmart Ecom Shop
+@php
+$seo_setting = App\Models\Seo::find(1);
+@endphp
+{{$seo_setting->meta_title}}
 @endsection
 <div class="body-content outer-top-xs" id="top-banner-and-menu">
     <div class="container">
@@ -142,7 +145,7 @@ Flipmart Ecom Shop
                 <!-- /.sidebar-widget -->
                 <!-- ============================================== SPECIAL DEALS : END ============================================== -->
                 <!-- ============================================== NEWSLETTER ============================================== -->
-                <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small">
+                <!-- <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small">
                     <h3 class="section-title">Newsletters</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <p>Sign Up for Our Newsletter!</p>
@@ -154,8 +157,7 @@ Flipmart Ecom Shop
                             <button class="btn btn-primary">Subscribe</button>
                         </form>
                     </div>
-                    <!-- /.sidebar-widget-body -->
-                </div>
+                </div> -->
                 <!-- /.sidebar-widget -->
                 <!-- ============================================== NEWSLETTER: END ============================================== -->
 
@@ -164,7 +166,7 @@ Flipmart Ecom Shop
 
                 <!-- ============================================== Testimonials: END ============================================== -->
 
-                <div class="home-banner"> <img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg')}}" alt="Image"> </div>
+                <!-- <div class="home-banner"> <img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg')}}" alt="Image"> </div> -->
             </div>
             <!-- /.sidemenu-holder -->
             <!-- ============================================== SIDEBAR : END ============================================== -->
@@ -455,26 +457,20 @@ Flipmart Ecom Shop
                 <!-- /.scroll-tabs -->
                 <!-- ============================================== SCROLL TABS : END ============================================== -->
                 <!-- ============================================== WIDE PRODUCTS ============================================== -->
-                <div class="wide-banners wow fadeInUp outer-bottom-xs">
+                <!-- <div class="wide-banners wow fadeInUp outer-bottom-xs">
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
                             <div class="wide-banner cnt-strip">
                                 <div class="image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/banners/home-banner1.jpg')}}" alt=""> </div>
                             </div>
-                            <!-- /.wide-banner -->
                         </div>
-                        <!-- /.col -->
                         <div class="col-md-5 col-sm-5">
                             <div class="wide-banner cnt-strip">
                                 <div class="image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/banners/home-banner2.jpg')}}" alt=""> </div>
                             </div>
-                            <!-- /.wide-banner -->
                         </div>
-                        <!-- /.col -->
                     </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.wide-banners -->
+                </div> -->
 
                 <!-- ============================================== WIDE PRODUCTS : END ============================================== -->
                 <!-- ============================================== FEATURED PRODUCTS ============================================== -->
@@ -869,261 +865,8 @@ Flipmart Ecom Shop
                 <!-- ============================================== SKIP 1 BRAND : END ============================================== -->
 
 
-                <!-- ============================================== BEST SELLER ============================================== -->
-
-                <div class="best-deal wow fadeInUp outer-bottom-xs">
-                    <h3 class="section-title">Best seller</h3>
-                    <div class="sidebar-widget-body outer-top-xs">
-                        <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p20.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p21.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p22.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p23.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p24.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p25.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p26.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="#"> <img src="{{ asset('frontend/assets/images/products/p27.jpg')}}" alt=""> </a> </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.sidebar-widget-body -->
-                </div>
-                <!-- /.sidebar-widget -->
-                <!-- ============================================== BEST SELLER : END ============================================== -->
-
                 <!-- ============================================== BLOG SLIDER ============================================== -->
-                <section class="section latest-blog outer-bottom-vs wow fadeInUp">
+                <!-- <section class="section latest-blog outer-bottom-vs wow fadeInUp">
                     <h3 class="section-title">latest form blog</h3>
                     <div class="blog-slider-container outer-top-xs">
                         <div class="owl-carousel blog-slider custom-carousel">
@@ -1138,8 +881,6 @@ Flipmart Ecom Shop
                                             </a>
                                         </div>
                                     </div>
-                                    <!-- /.blog-post-image -->
-
                                     <div class="blog-post-info text-left">
                                         <h3 class="name">
                                             <a href="{{ route('blog.details', $post->post_title_slug_en)}}">
@@ -1160,24 +901,18 @@ Flipmart Ecom Shop
                                         </p>
                                         <a href="{{ route('blog.details', $post->post_title_slug_en)}}" class="lnk btn btn-primary">Read more</a>
                                     </div>
-                                    <!-- /.blog-post-info -->
 
                                 </div>
-                                <!-- /.blog-post -->
                             </div>
-                            <!-- /.item -->
                             @endforeach
 
                         </div>
-                        <!-- /.owl-carousel -->
                     </div>
-                    <!-- /.blog-slider-container -->
-                </section>
-                <!-- /.section -->
+                </section> -->
                 <!-- ============================================== BLOG SLIDER : END ============================================== -->
 
                 <!-- ============================================== FEATURED PRODUCTS ============================================== -->
-                <section class="section wow fadeInUp new-arriavls">
+                <!-- <section class="section wow fadeInUp new-arriavls">
                     <h3 class="section-title">New Arrivals</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
                         <div class="item item-carousel">
@@ -1185,21 +920,17 @@ Flipmart Ecom Shop
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p19.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag new"><span>new</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1215,37 +946,28 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p28.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag new"><span>new</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1261,37 +983,28 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p30.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag hot"><span>hot</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1307,37 +1020,28 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p1.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag hot"><span>hot</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1353,37 +1057,28 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p2.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag sale"><span>sale</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1399,37 +1094,28 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"> <a href="detail.html"><img src="{{ asset('frontend/assets/images/products/p3.jpg')}}" alt=""></a> </div>
-                                        <!-- /.image -->
 
                                         <div class="tag sale"><span>sale</span></div>
                                     </div>
-                                    <!-- /.product-image -->
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                                        <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
                                     <div class="cart clearfix animate-effect">
                                         <div class="action">
                                             <ul class="list-unstyled">
@@ -1445,20 +1131,13 @@ Flipmart Ecom Shop
                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                             </ul>
                                         </div>
-                                        <!-- /.action -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
 
                             </div>
-                            <!-- /.products -->
                         </div>
-                        <!-- /.item -->
                     </div>
-                    <!-- /.home-owl-carousel -->
-                </section>
-                <!-- /.section -->
+                </section> -->
                 <!-- ============================================== FEATURED PRODUCTS : END ============================================== -->
 
             </div>

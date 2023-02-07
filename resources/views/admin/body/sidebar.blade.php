@@ -179,7 +179,7 @@
                 </ul>
             </li>
             @endif
-            @if($blogs == true)
+            <!-- @if($blogs == true)
             <li class="sub-menu ">
                 <a href="javascript:;" class="{{ ($prefix == '/blogs') ? 'active' : ''}}">
                     <i class="fa fa-laptop"></i>
@@ -190,7 +190,7 @@
                     <li class="{{ ($route == 'all.blog') ? 'active' : ''}}"><a href="{{ route('all.blog')}}">All Blogs</a></li>
                 </ul>
             </li>
-            @endif
+            @endif -->
             @if($setting == true)
             <li class="sub-menu ">
                 <a href="javascript:;" class="{{ ($prefix == '/setting') ? 'active' : ''}}">
@@ -198,7 +198,9 @@
                     <span>Manage Settings</span>
                 </a>
                 <ul class="sub">
-                    <li class="{{ ($route == 'site.setting') ? 'active' : ''}}"><a href="{{ route('site.setting')}}">Site Settings</a></li>
+                    <li class="{{ ($route == 'site.setting') ? 'active' : ''}}">
+                        <a href="{{ route('site.setting')}}">Site Settings</a>
+                    </li>
                     <li class="{{ ($route == 'seo.setting') ? 'active' : ''}}"><a href="{{ route('seo.setting')}}">SEO Settings</a></li>
                 </ul>
             </li>

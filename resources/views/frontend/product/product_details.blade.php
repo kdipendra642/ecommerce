@@ -26,14 +26,13 @@
             <div class='col-md-3 sidebar'>
                 <div class="sidebar-module-container">
                     <div class="home-banner outer-top-n">
-                        <img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg')}}" alt="Image">
                     </div>
                     <!-- ============================================== HOT DEALS ============================================== -->
                     @include('frontend.common.hot_deal')
                     <!-- ============================================== HOT DEALS: END ============================================== -->
 
                     <!-- ============================================== NEWSLETTER ============================================== -->
-                    <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small outer-top-vs">
+                    <!-- <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small outer-top-vs">
                         <h3 class="section-title">Newsletters</h3>
                         <div class="sidebar-widget-body outer-top-xs">
                             <p>Sign Up for Our Newsletter!</p>
@@ -44,41 +43,11 @@
                                 </div>
                                 <button class="btn btn-primary">Subscribe</button>
                             </form>
-                        </div><!-- /.sidebar-widget-body -->
-                    </div><!-- /.sidebar-widget -->
+                        </div>
+                    </div> -->
                     <!-- ============================================== NEWSLETTER: END ============================================== -->
 
                     <!-- ============================================== Testimonials============================================== -->
-                    <div class="sidebar-widget  wow fadeInUp outer-top-vs ">
-                        <div id="advertisement" class="advertisement">
-                            <div class="item">
-                                <div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member1.png')}}" alt="Image">
-                                </div>
-                                <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">John Doe <span>Abc Company</span> </div>
-                                <!-- /.container-fluid -->
-                            </div><!-- /.item -->
-
-                            <div class="item">
-                                <div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member3.png')}}" alt="Image">
-                                </div>
-                                <div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">Stephen Doe <span>Xperia Designs</span> </div>
-                            </div><!-- /.item -->
-
-                            <div class="item">
-                                <div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member2.png')}}" alt="Image">
-                                </div>
-                                <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">Saraha Smith <span>Datsun &amp; Co</span> </div>
-                                <!-- /.container-fluid -->
-                            </div><!-- /.item -->
-
-                        </div><!-- /.owl-carousel -->
-                    </div>
 
                     <!-- ============================================== Testimonials: END ============================================== -->
 
@@ -138,11 +107,11 @@
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <div class="rating rateit-small"></div>
+                                            <!-- <div class="rating rateit-small"></div> -->
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="reviews">
-                                                <a href="#" class="lnk">(13 Reviews)</a>
+                                                <!-- <a href="#" class="lnk">(13 Reviews)</a> -->
                                             </div>
                                         </div>
                                     </div><!-- /.row -->
@@ -318,7 +287,7 @@
                             <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
                                 <li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
                                 <li><a data-toggle="tab" href="#review">REVIEW</a></li>
-                                <li><a data-toggle="tab" href="#tags">TAGS</a></li>
+                                <!-- <li><a data-toggle="tab" href="#tags">TAGS</a></li> -->
                             </ul><!-- /.nav-tabs #product-tabs -->
                         </div>
                         <div class="col-sm-9">
@@ -432,7 +401,7 @@
                                     </div><!-- /.product-tab -->
                                 </div><!-- /.tab-pane -->
 
-                                <div id="tags" class="tab-pane">
+                                <!-- <div id="tags" class="tab-pane">
                                     <div class="product-tag">
 
                                         <h4 class="title">Product Tags</h4>
@@ -448,8 +417,8 @@
 
                                                 <button class="btn btn-upper btn-primary" type="submit">ADD
                                                     TAGS</button>
-                                            </div><!-- /.form-container -->
-                                        </form><!-- /.form-cnt -->
+                                            </div>
+                                        </form>
 
                                         <form role="form" class="form-inline form-cnt">
                                             <div class="form-group">
@@ -457,10 +426,10 @@
                                                 <span class="text col-md-offset-3">Use spaces to separate tags. Use
                                                     single quotes (') for phrases.</span>
                                             </div>
-                                        </form><!-- /.form-cnt -->
+                                        </form>
 
-                                    </div><!-- /.product-tab -->
-                                </div><!-- /.tab-pane -->
+                                    </div>
+                                </div> -->
 
                             </div><!-- /.tab-content -->
                         </div><!-- /.col -->
@@ -469,7 +438,7 @@
 
                 <!-- ============================================== UPSELL PRODUCTS ============================================== -->
                 <section class="section featured-product wow fadeInUp">
-                    <h3 class="section-title">upsell products</h3>
+                    <h3 class="section-title">People Also Buy</h3>
                     <div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 
                         @foreach($relatedProducts as $product)
